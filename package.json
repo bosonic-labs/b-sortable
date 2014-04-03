@@ -1,6 +1,6 @@
 {
   "name": "b-sortable",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Bosonic element which enable a group of DOM elements to be sortable.",
   "main": "Gruntfile.js",
   "scripts": {
@@ -12,11 +12,14 @@
   },
   "author": "Raphaël Rougeron <goldoraf@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bosonic/b-sortable/issues"
+  },
   "devDependencies": {
     "bosonic-test-tools": "*",
-    "grunt-bosonic": "*"
+    "grunt-bosonic": ">=0.4.0"
   },
   "dependencies": {
-    "bosonic": "*"
+    "bosonic": ">=0.4.0"
   }
 }

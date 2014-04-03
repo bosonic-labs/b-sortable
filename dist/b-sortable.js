@@ -541,15 +541,22 @@
     return  Sortable;
 });
 (function () {
-    Bosonic.registerElement('b-sortable', {
-        readyCallback: function () {
-            var list = this.firstElementChild;
-            var sortable = new Sortable(list, { onUpdate: this.onUpdate.bind(this) });
-        },
-        onUpdate: function (evt) {
-            evt.stopPropagation();
-            var detail = { item: evt.item };
-            this.dispatchEvent(new CustomEvent('update', { detail: detail }));
-        }
-    });
+    var BSortablePrototype = Object.create(HTMLElement.prototype, {
+            createdCallback: {
+                enumerable: true,
+                value: function () {
+                    var list = this.firstElementChild;
+                    var sortable = new Sortable(list, { onUpdate: this.onUpdate.bind(this) });
+                }
+            },
+            onUpdate: {
+                enumerable: true,
+                value: function (evt) {
+                    evt.stopPropagation();
+                    var detail = { item: evt.item };
+                    this.dispatchEvent(new CustomEvent('update', { detail: detail }));
+                }
+            }
+        });
+    window.BSortable = document.registerElement('b-sortable', { prototype: BSortablePrototype });
 }());

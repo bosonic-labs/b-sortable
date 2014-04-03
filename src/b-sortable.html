@@ -17,7 +17,7 @@
     <script src="../lib/Sortable.js"></script>
     <script>
         ({
-            readyCallback: function() {
+            createdCallback: function() {
                 var list = this.firstElementChild;
                 var sortable = new Sortable(list, {
                     onUpdate: this.onUpdate.bind(this)
