@@ -1,7 +1,7 @@
 {
   "name": "b-sortable",
-  "version": "0.2.0",
-  "description": "A Bosonic element which enable a group of DOM elements to be sortable.",
+  "version": "0.2.1",
+  "description": "b-sortable has been deprecated. Use bosonic-dnd-elements instead.",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,9 +17,9 @@
   },
   "devDependencies": {
     "bosonic-test-tools": "*",
-    "grunt-bosonic": ">=0.4.0"
+    "grunt-bosonic": "~0.4.0"
   },
   "dependencies": {
-    "bosonic": ">=0.4.0"
+    "bosonic": "~0.4.0"
   }
 }
